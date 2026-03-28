@@ -49,7 +49,7 @@ function App() {
                AURA 
                <span className="bg-[#9EAB9A]/20 text-[#6B7967] text-xs px-2 py-1 flex items-center h-6 rounded-full uppercase tracking-widest font-sans font-bold">Beta</span>
             </h1>
-            <p className="text-[#2E2018]/60 mt-1 font-medium tracking-wide font-sans">Aesthetic Ingredient Auditor</p>
+            <p className="text-[#2E2018]/50 mt-2 font-medium tracking-[0.1em] font-sans text-sm uppercase">Know before you glow.</p>
           </div>
           <p className="text-right text-[#2E2018]/40 font-bold tracking-[0.2em] text-xs uppercase font-serif">A Space for Clarity</p>
         </header>
