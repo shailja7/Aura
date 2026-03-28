@@ -1,0 +1,202 @@
+[
+  {
+    "id": "c1",
+    "category": "Cleanser",
+    "brand": "Vanicream",
+    "name": "Gentle Facial Cleanser",
+    "price": "$9.00",
+    "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://amazon.com/placeholder-vanicream",
+    "description": "Cult-favorite, ultra-gentle, and 100% Malassezia safe."
+  },
+  {
+    "id": "c2",
+    "category": "Cleanser",
+    "brand": "Bioderma",
+    "name": "Sensibio H2O Micellar Water",
+    "price": "$16.00",
+    "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://amazon.com/placeholder-bioderma",
+    "description": "The gold standard gentle makeup remover and first cleanse."
+  },
+  {
+    "id": "c3",
+    "category": "Cleanser",
+    "brand": "Malezia",
+    "name": "Purified Hyaluronic Acid Cleanser",
+    "price": "$14.00",
+    "image": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://malezia.com/placeholder",
+    "description": "Formulated specifically for fungal acne prone skin."
+  },
+  {
+    "id": "c4",
+    "category": "Cleanser",
+    "brand": "Etude House",
+    "name": "SoonJung pH 6.5 Whip Cleanser",
+    "price": "$13.00",
+    "image": "https://images.unsplash.com/photo-1580870059865-ec4f67b84183?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://yesstyle.com/placeholder",
+    "description": "A soothing, foaming cloud that respects the skin barrier."
+  },
+  {
+    "id": "c5",
+    "category": "Cleanser",
+    "brand": "KraveBeauty",
+    "name": "Matcha Hemp Hydrating Cleanser",
+    "price": "$16.00",
+    "image": "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://kravebeauty.com/placeholder",
+    "description": "Jelly texture, non-stripping, and totally safe."
+  },
+  {
+    "id": "m1",
+    "category": "Moisturizer",
+    "brand": "Malezia",
+    "name": "5% Urea Moisturizer",
+    "price": "$22.00",
+    "image": "https://images.unsplash.com/photo-1615397323861-1250fbd18d2d?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://malezia.com/placeholder",
+    "description": "The holy grail for FA sufferers; intensely hydrating and barrier-repairing."
+  },
+  {
+    "id": "m2",
+    "category": "Moisturizer",
+    "brand": "Curel",
+    "name": "Intensive Moisture Facial Cream",
+    "price": "$30.00",
+    "image": "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://amazon.com/placeholder-curel",
+    "description": "Airy, ceramide-rich cream that nourishes without triggering yeast."
+  },
+  {
+    "id": "m3",
+    "category": "Moisturizer",
+    "brand": "Hada Labo",
+    "name": "Tokyo Skin Plumping Gel Cream",
+    "price": "$20.00",
+    "image": "https://images.unsplash.com/photo-1570194065650-d60fdab208db?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://amazon.com/placeholder-hadalabo",
+    "description": "Packed with hyaluronic acid for an instant dewy glow."
+  },
+  {
+    "id": "m4",
+    "category": "Moisturizer",
+    "brand": "Sebamed",
+    "name": "Clear Face Care Gel",
+    "price": "$19.00",
+    "image": "https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://amazon.com/placeholder-sebamed",
+    "description": "Ultra-minimalist, soothing gel that hydrates safely."
+  },
+  {
+    "id": "m5",
+    "category": "Moisturizer",
+    "brand": "Benton",
+    "name": "Aloe Propolis Soothing Gel",
+    "price": "$15.00",
+    "image": "https://images.unsplash.com/photo-1555820598-c801f4c7217e?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://amazon.com/placeholder-benton",
+    "description": "Calms redness and inflammation while locking in moisture."
+  },
+  {
+    "id": "s1",
+    "category": "Sunscreen",
+    "brand": "Skin Aqua",
+    "name": "Super Moisture Milk SPF 50",
+    "price": "$14.00",
+    "image": "https://images.unsplash.com/photo-1526042168395-5db95ccfc7fa?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://amazon.com/placeholder-skinaqua",
+    "description": "Elegant, runny formula that dries invisibly without FA triggers."
+  },
+  {
+    "id": "s2",
+    "category": "Sunscreen",
+    "brand": "Nivea",
+    "name": "Sun Protect Super Water Gel SPF 50",
+    "price": "$12.00",
+    "image": "https://images.unsplash.com/photo-1550242137-58b2111d95dc?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://amazon.com/placeholder-nivea",
+    "description": "Feels like splashing water on your face. Truly weightless."
+  },
+  {
+    "id": "s3",
+    "category": "Sunscreen",
+    "brand": "EltaMD",
+    "name": "UV Clear Broad-Spectrum SPF 46",
+    "price": "$39.00",
+    "image": "https://images.unsplash.com/photo-1563241527-20045cbbf914?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://amazon.com/placeholder-eltamd",
+    "description": "Dermatologist favorite containing niacinamide to calm acne."
+  },
+  {
+    "id": "s4",
+    "category": "Sunscreen",
+    "brand": "Cotz",
+    "name": "Face Prime & Protect Tinted SPF 40",
+    "price": "$28.00",
+    "image": "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://amazon.com/placeholder-cotz",
+    "description": "Silky, mattifying primer with mineral protection."
+  },
+  {
+    "id": "s5",
+    "category": "Sunscreen",
+    "brand": "Hada Labo",
+    "name": "UV White Gel SPF 50",
+    "price": "$22.00",
+    "image": "https://images.unsplash.com/photo-1585802525350-08d4aed140e7?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://amazon.com/placeholder-uvwhite",
+    "description": "Hybrid moisturizer and SPF all in one safe jar."
+  },
+  {
+    "id": "f1",
+    "category": "Foundation",
+    "brand": "Fenty Beauty",
+    "name": "Pro Filt'r Soft Matte Foundation",
+    "price": "$40.00",
+    "image": "https://images.unsplash.com/photo-1599305090598-fe179d501227?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://sephora.com/placeholder",
+    "description": "Incredible shade range and totally FA safe matte finish."
+  },
+  {
+    "id": "f2",
+    "category": "Foundation",
+    "brand": "Giorgio Armani",
+    "name": "Luminous Silk Foundation",
+    "price": "$69.00",
+    "image": "https://images.unsplash.com/photo-1596462502278-27bf85033e5a?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://sephora.com/placeholder",
+    "description": "Iconic, glowing finish without the pore-clogging triggers."
+  },
+  {
+    "id": "f3",
+    "category": "Foundation",
+    "brand": "NYX",
+    "name": "Can't Stop Won't Stop Foundation",
+    "price": "$15.00",
+    "image": "https://images.unsplash.com/photo-1598442220498-cd35d64816c2?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://ulta.com/placeholder",
+    "description": "High coverage, sweatproof, and drugstore affordable."
+  },
+  {
+    "id": "f4",
+    "category": "Foundation",
+    "brand": "Dior",
+    "name": "Backstage Face & Body Foundation",
+    "price": "$43.00",
+    "image": "https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://sephora.com/placeholder",
+    "description": "Runway-ready second skin finish that respects FA-prone skin."
+  },
+  {
+    "id": "f5",
+    "category": "Foundation",
+    "brand": "Maybelline",
+    "name": "Fit Me Matte + Poreless",
+    "price": "$8.00",
+    "image": "https://images.unsplash.com/photo-1558500222-6b93de14eb79?auto=format&fit=crop&q=80&w=400",
+    "affiliateLink": "https://ulta.com/placeholder",
+    "description": "The ultimate drugstore safe swap for oily, acne-prone skin."
+  }
+]
