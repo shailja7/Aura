@@ -29,8 +29,8 @@ function levenshteinDistance(a, b) {
 export function sanitizeIngredients(rawText) {
   if (!rawText || typeof rawText !== 'string') return [];
   
-  // Strip common noisy filler words before splitting to maintain token structure
-  const noiseRegex = /\(aqua\/eau\)|extract|oil|derived from|[\.\*•]/gi;
+  // Strip common noisy filler structural characters but KEEP base ingredient terms like 'oil'
+  const noiseRegex = /\(aqua\/eau\)|extract|derived from|[\.\*•]/gi;
   const cleanString = rawText.replace(noiseRegex, '').toLowerCase();
 
   return cleanString

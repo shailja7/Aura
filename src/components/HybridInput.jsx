@@ -67,8 +67,6 @@ export default function HybridInput({ onAnalyze, onScanStart }) {
   };
 
   // Mirrored Highlight Logic
-  // We identify flagged triggers by grabbing the latest results from parseIngredients
-  // We do it here reactively based on inputText
   const getHighlightedText = () => {
     if (!inputText.trim()) return null;
     
@@ -79,12 +77,20 @@ export default function HybridInput({ onAnalyze, onScanStart }) {
     // Safety check if nothing flagged
     if (triggers.length === 0) return inputText;
 
+    // Helper to escape regex special characters (like parentheses in botanical names)
+    const escapeRegex = (string) => {
+      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
     // Split text into words and highlight matches
-    // Simple naive regex matching for highlighted tokens
     let highlightedHTML = inputText;
-    triggers.forEach(trigger => {
-       const regex = new RegExp(`(${trigger})`, 'gi');
-       highlightedHTML = highlightedHTML.replace(regex, `<mark class="bg-amber-100 text-amber-900 rounded px-1 -mx-1">$1</mark>`);
+    // Sort triggers by length (longest first) to ensure greedy matching
+    const sortedTriggers = [...triggers].sort((a, b) => b.length - a.length);
+
+    sortedTriggers.forEach(trigger => {
+       const escapedTrigger = escapeRegex(trigger);
+       const regex = new RegExp(`(${escapedTrigger})`, 'gi');
+       highlightedHTML = highlightedHTML.replace(regex, `<mark class="bg-amber-100/80 text-amber-900 rounded px-1 -mx-1">$1</mark>`);
     });
     
     return <div dangerouslySetInnerHTML={{ __html: highlightedHTML }} />;
