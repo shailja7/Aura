@@ -12,6 +12,7 @@ export default function HybridInput({ onAnalyze, onScanStart }) {
   const textareaRef = useRef(null);
   const backdropRef = useRef(null);
   const webcamRef = useRef(null);
+  const debounceTimer = useRef(null);
 
   // Sync scroll between textarea and mirrored div
   const handleScroll = (e) => {
@@ -22,20 +23,21 @@ export default function HybridInput({ onAnalyze, onScanStart }) {
   };
 
   const handleTextChange = (e) => {
-    setInputText(e.target.value);
+    const newVal = e.target.value;
+    setInputText(newVal);
+
+    // Reactive debounced analysis while typing
+    if (debounceTimer.current) clearTimeout(debounceTimer.current);
+    debounceTimer.current = setTimeout(() => {
+      const results = parseIngredients(newVal);
+      if (onAnalyze) onAnalyze(results);
+    }, 600);
   };
 
-  const handleBlurOrSubmit = () => {
+  const handleManualSubmit = () => {
     if (!inputText.trim()) return;
-    setIsProcessing(true);
-    if(onScanStart) onScanStart();
-
-    // Small timeout to allow UI to render spinner if needed
-    setTimeout(() => {
-      const results = parseIngredients(inputText);
-      setIsProcessing(false);
-      onAnalyze(results);
-    }, 400);
+    const results = parseIngredients(inputText);
+    if (onAnalyze) onAnalyze(results);
   };
 
   const captureAndAnalyze = async () => {
@@ -89,20 +91,20 @@ export default function HybridInput({ onAnalyze, onScanStart }) {
   };
 
   return (
-    <div className="relative w-full h-full min-h-[400px] flex flex-col bg-white/40 backdrop-blur-md rounded-[2.5rem] border border-white/50 shadow-[0_10px_40px_-10px_rgba(46,32,24,0.08)] overflow-hidden transition-all duration-500 font-sans">
+    <div className="relative w-full h-full min-h-[400px] flex flex-col bg-white/70 backdrop-blur-lg rounded-[2.5rem] border border-white/60 shadow-[0_10px_40px_-10px_rgba(46,32,24,0.12)] overflow-hidden transition-all duration-500 font-sans">
       
       {/* 
         ------------- TOP 70%: TEXT WORKSPACE ------------- 
       */}
       <div className="relative flex-1 p-6 z-10 flex flex-col group min-h-[250px]">
-        <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-[#2E2018] opacity-50 mb-4 font-serif">Manual Input</h3>
+        <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-[#2E2018] opacity-70 mb-4 font-serif">Manual Input</h3>
         
-        <div className="relative flex-1 w-full h-full rounded-2xl overflow-hidden focus-within:ring-2 focus-within:ring-[#9EAB9A]/50 transition-all bg-white/20">
+        <div className="relative flex-1 w-full h-full rounded-2xl overflow-hidden focus-within:ring-2 focus-within:ring-[#9EAB9A]/50 transition-all bg-white/40">
            
            {/* Backdrop Mirrored Element */}
            <div 
              ref={backdropRef}
-             className="absolute inset-0 p-4 text-[#2E2018] opacity-60 font-sans text-base leading-relaxed whitespace-pre-wrap overflow-hidden pointer-events-none break-words"
+             className="absolute inset-0 p-4 text-[#2E2018] opacity-80 font-sans text-base leading-relaxed whitespace-pre-wrap overflow-hidden pointer-events-none break-words"
              aria-hidden="true"
            >
               {getHighlightedText()}
@@ -114,9 +116,9 @@ export default function HybridInput({ onAnalyze, onScanStart }) {
              value={inputText}
              onChange={handleTextChange}
              onScroll={handleScroll}
-             onBlur={handleBlurOrSubmit}
+             onBlur={handleManualSubmit}
              placeholder="Paste ingredient list here, separated by commas..."
-             className="absolute inset-0 w-full h-full p-4 bg-transparent text-transparent caret-[#2E2018] font-sans text-base leading-relaxed resize-none focus:outline-none placeholder:text-[#2E2018]/40"
+             className="absolute inset-0 w-full h-full p-4 bg-transparent text-transparent caret-[#2E2018] font-sans text-base leading-relaxed resize-none focus:outline-none placeholder:text-[#2E2018]/60"
              spellCheck="false"
            />
         </div>
