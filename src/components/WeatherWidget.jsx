@@ -86,8 +86,8 @@ export default function WeatherWidget() {
   };
 
   return (
-    <div className={`w-full h-full min-h-[300px] md:min-h-0 flex flex-col justify-center bg-gradient-to-br ${timeGradient} backdrop-blur-md rounded-[2.5rem] border border-white/50 shadow-[0_10px_40px_-10px_rgba(46,32,24,0.08)] transition-all duration-700 p-6 relative overflow-hidden group font-sans`}>
-      <h2 className="absolute top-6 left-6 text-sm font-bold tracking-wider uppercase opacity-70 flex items-center gap-1.5 z-10 font-sans text-[#2E2018]">
+    <div className={`w-full h-full min-h-[300px] md:min-h-0 flex flex-col justify-center bg-gradient-to-br ${timeGradient} backdrop-blur-lg rounded-[2.5rem] border border-white/60 shadow-[0_10px_40px_-10px_rgba(46,32,24,0.12)] transition-all duration-700 p-6 relative overflow-hidden group font-sans`}>
+      <h2 className="absolute top-6 left-6 text-sm font-bold tracking-wider uppercase opacity-80 flex items-center gap-1.5 z-10 font-sans text-[#2E2018]">
         <MapPin size={14} /> Climate
       </h2>
 

@@ -4,7 +4,7 @@ import { Check, X as XIcon, HelpCircle } from 'lucide-react';
 export default function IngredientChips({ results }) {
   if (!results) {
     return (
-      <div className="w-full h-full min-h-[150px] flex items-center justify-center bg-white/40 backdrop-blur-md rounded-2xl border border-white/50 p-6 text-gray-400 font-medium">
+      <div className="w-full h-full min-h-[150px] flex items-center justify-center bg-white/70 backdrop-blur-lg rounded-[2.5rem] border border-white/60 p-6 text-[#2E2018]/60 font-medium shadow-[0_10px_40px_-10px_rgba(46,32,24,0.12)]">
         Scan an ingredient list to see details.
       </div>
     );
@@ -17,10 +17,10 @@ export default function IngredientChips({ results }) {
   const safeIngredients = matched?.filter(m => !flaggedNames.has(m.name)) || [];
 
   return (
-    <div className="w-full bg-white/40 backdrop-blur-md rounded-[2.5rem] border border-white/50 shadow-[0_10px_40px_-10px_rgba(46,32,24,0.08)] p-6 md:p-8 flex flex-col items-start transition-all overflow-hidden h-full">
+    <div className="w-full bg-white/70 backdrop-blur-lg rounded-[2.5rem] border border-white/60 shadow-[0_10px_40px_-10px_rgba(46,32,24,0.12)] p-6 md:p-8 flex flex-col items-start transition-all overflow-hidden h-full">
       <h3 className="text-xl font-bold text-[#2E2018] font-sans tracking-tight flex items-center gap-2 mb-6">
         Scanned Results
-        <span className="text-sm font-normal text-gray-400 bg-white/50 px-3 py-1 rounded-full">
+        <span className="text-sm font-normal text-[#2E2018]/40 bg-white/50 px-3 py-1 rounded-full">
           {matchedCount + unknownCount} found
         </span>
       </h3>
